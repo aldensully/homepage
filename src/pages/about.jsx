@@ -12,16 +12,17 @@ export default function About(props) {
   const { toggleColorMode } = useColorMode();
   const [isGraphMode, setIsGraphMode] = useState(true);
 
-  const bg = useColorModeValue("#171923", "#CBD5E0");
+  //const bg = useColorModeValue("#171923", "#CBD5E0");
+  //const color = useColorModeValue("white", "gray.800");
+  const bg = useColorModeValue("#171923", "#FFFAF0");
   const color = useColorModeValue("white", "gray.800");
-  const accent = useColorModeValue("blue.200", "blue.500");
 
   const width = window.innerWidth / 2;
-  const height = window.innerHeight / 2.5;
+  const height = window.innerHeight / 2;
   return (
     <Flex overflowX="hidden" bg={bg} color={color} flexDirection="column" alignItems="center">
       <Navbar bg={bg} color={color} path={props.path} />
-      <Flex mt={8} width={width} flexDirection="column">
+      <Flex mt={8} outline="1px solid grey" width={width} flexDirection="column">
         <Flex width="inehrit" position="absolute" zIndex={2} alignItems="center" >
           <Box m={2}
             onClick={() => setIsGraphMode(!isGraphMode)}

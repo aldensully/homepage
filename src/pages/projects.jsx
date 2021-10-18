@@ -5,7 +5,7 @@ import { useColorMode, useColorModeValue } from '@chakra-ui/color-mode';
 import Footer from '../components/footer';
 
 export default function Projects(props) {
-  const bg = useColorModeValue("#171923", "#CBD5E0");
+  const bg = useColorModeValue("#171923", "#FFFAF0");
   const color = useColorModeValue("white", "gray.800");
   const accent = useColorModeValue("blue.200", "blue.500");
   const width = window.innerWidth / 2;
@@ -14,9 +14,9 @@ export default function Projects(props) {
       <Navbar path={props.path} />
       <Flex flexDirection="column">
         <Heading ml={5} mt={20} textDecoration="underline" fontSize="xl">Projects</Heading>
-        <SimpleGrid alignSelf="center" ml={5} mt={10} columns={3} spacingY={10} spacingX={10} >
+        <SimpleGrid alignSelf="center" ml={5} mt={10} columns={2} spacingY={10} spacingX={10} >
           <LinkBox maxW="250px" cursor="pointer">
-            <Image boxSize="250px" maxH="200px" borderRadius={10} src="https://bit.ly/sage-adebayo" />
+            <Image boxSize="250px" maxH="200px" borderRadius={10} src="edo.png" />
             <LinkOverlay href={""} target="_blank">
               <Heading fontSize="xl" mt={2}>SleepEdo</Heading>
               <Text fontSize="md">Social alarm clock app</Text>

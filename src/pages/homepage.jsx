@@ -9,6 +9,7 @@ import { Link as Lk } from '@chakra-ui/react';
 import { Stars } from 'drei/Stars';
 import Campfire from '../three/mesh';
 import Footer from '../components/footer';
+import { motion } from "framer-motion"
 
 function HomeLinks(props) {
   const path = props.path;
@@ -39,7 +40,6 @@ const Homepage = (props) => {
 
   return (
     <>
-      {/* {loadin ? <Navbar path={props.path} /> : null} */}
       <Box position="absolute" ml="60%" mt="20%" width="fit-content" height="100px" bgColor="transparent" zIndex="2">
         {loadin ?
           <HomeLinks path={props.path} />
@@ -51,7 +51,7 @@ const Homepage = (props) => {
       </Box>
       <Box position="relative" width="100%" height="100vh">
         <Canvas >
-          <CameraController />
+          {/* <CameraController /> */}
           <color attach="background" args={['#001']} />
           <ambientLight color="pink" />
           <Stars radius={50} depth={70} count={5000} factor={4} saturation={10} fade />

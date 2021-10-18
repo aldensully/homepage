@@ -33,6 +33,8 @@ export default function Navbar(props) {
     setColorMode(!colorMode);
   }
 
+  const buttonColor = "teal.400";
+
   return (
     <Flex
       as="nav"
@@ -46,16 +48,16 @@ export default function Navbar(props) {
       color={props.color}
     >
       <Link to="/home">
-        <Text p={2} fontSize="xl" fontWeight="bold">Alden Sullivan</Text>
+        <Text p={2} fontSize="xl" fontWeight="bold">AS</Text>
       </Link>
       <Box width={20} />
       <Link to="/about">
-        <Box boxSize="fit-content" borderRadius={5} p={2} mx={1} bgColor={path === "/about" ? "blue.400" : "transparent"}>
+        <Box boxSize="fit-content" borderRadius={5} p={2} mx={1} bgColor={path === "/about" ? buttonColor : "transparent"}>
           <Text mx={2} fontWeight="medium"> About </Text>
         </Box>
       </Link>
       <Link to="/projects">
-        <Box boxSize="fit-content" borderRadius={5} p={2} mx={1} bgColor={path === "/projects" ? "blue.400" : "transparent"}>
+        <Box boxSize="fit-content" borderRadius={5} p={2} mx={1} bgColor={path === "/projects" ? buttonColor : "transparent"}>
           <Text mx={2} fontWeight="medium"> Projects </Text>
         </Box>
       </Link>
