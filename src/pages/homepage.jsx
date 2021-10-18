@@ -2,12 +2,13 @@ import React, { useRef, useState, Suspense, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
 import { Box, Text, Icon, Flex } from '@chakra-ui/react';
-import * as THREE from 'three';
 import CameraController from '../three/cameraController';
-import Mesh from '../three/mesh';
 import { Link } from 'react-router-dom';
 import { AiFillGithub } from 'react-icons/ai';
 import { Link as Lk } from '@chakra-ui/react';
+import { Stars } from 'drei/Stars';
+import Campfire from '../three/mesh';
+import Footer from '../components/footer';
 
 function HomeLinks(props) {
   const path = props.path;
@@ -29,7 +30,7 @@ function HomeLinks(props) {
     </Box>
   )
 }
-export default function Homepage(props) {
+const Homepage = (props) => {
   const [loadin, setLoadin] = useState(false);
   //store loadin in sessionstorage so it only says hello once
   useEffect(() => {
@@ -49,14 +50,17 @@ export default function Homepage(props) {
         }
       </Box>
       <Box position="relative" width="100%" height="100vh">
-        <Canvas>
+        <Canvas >
           <CameraController />
-          <color attach="background" args={['black']} />
-          <fog attach="fog" args={['black', 15, 20]} />
-          <pointLight position={[10, 10, 10]} />
-          <Mesh />
+          <color attach="background" args={['#001']} />
+          <ambientLight color="pink" />
+          <Stars radius={50} depth={70} count={5000} factor={4} saturation={10} fade />
+          {/* <Suspense fallback={null}>
+            <Campfire />
+          </Suspense> */}
         </Canvas>
       </Box>
     </>
   )
 }
+export default Homepage;
