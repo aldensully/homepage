@@ -60,7 +60,7 @@ export default function Navbar(props) {
         </Box>
       </Link>
       <Icon ml={2} size="xs" as={AiFillGithub} />
-      <Lk href="https://github.com/aldensully">
+      <Lk href="https://github.com/aldensully/homepage">
         <Text mx={2} fontWeight="medium"> Source </Text>
       </Lk>
       <IconButton size="md" colorScheme={useColorModeValue('orange', 'purple')} p={2} mx={5} onClick={handleClick} as={useColorModeValue(MdOutlineWbSunny, MdDarkMode)} />

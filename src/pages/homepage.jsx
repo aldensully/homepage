@@ -23,7 +23,7 @@ function HomeLinks(props) {
           <Text mx={2} color="gray.200" fontSize="2xl" fontWeight="medium"> Projects </Text>
         </Box>
       </Link>
-      <Lk href="https://github.com/aldensully">
+      <Lk href="https://github.com/aldensully/homepage">
         <Text mx={2} color="gray.200" fontSize="2xl" fontWeight="medium"> Source </Text>
       </Lk>
     </Box>
